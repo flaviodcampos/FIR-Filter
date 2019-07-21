@@ -15,7 +15,7 @@ signal = signal * 2;
 %Criacao do filtro
 freq_cut = 4000; %frequencia de corte em hertz
 freq_reject = 4500; %frequencia de rejeicao em hertz
-attenuation_freq_cut = 1; %Passband ripple in dB
+attenuation_freq_cut = 5; %Passband ripple in dB
 attenuation_freq_reject = 100; %Stopband ripple in dB
 lowpass_filter = fdesign.lowpass('Fp,Fst,Ap,Ast',freq_cut,freq_reject,attenuation_freq_cut,attenuation_freq_reject,freq);
 fir_filter = design(lowpass_filter,'FIR');
