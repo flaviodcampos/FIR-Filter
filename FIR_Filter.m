@@ -3,7 +3,7 @@
 % Curso de Engenharia da Computação
 % Processamento Digital de Sinais
 
-% Script filtro FIR
+%% Script filtro FIR
 
 close all; clear; clc;
 
@@ -25,3 +25,10 @@ disp(['Ordem minima: ',num2str(fir_order)]);
 
 % Filtragem do sinal
 fir_signal = filter(fir_filter,signal);
+
+%% Resultados
+
+figure('name', 'Sinal no tempo');
+time = (1:length(signal))./freq;
+fir_time = (1:length(fir_signal))./freq;
+
